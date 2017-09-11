@@ -1,7 +1,7 @@
-Package: glassdoor
 Type: Package
-Title: R GLassdoor API
-Version: 0.1.0
+Package: glassdoor
+Title: Glassdoor API for R
+Version: 0.2
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = "cre",
@@ -9,13 +9,21 @@ Authors@R: person(given = "John",
 Maintainer: John Muschelli <muschellij2@gmail.com>
 Description: Interacts with the Glassdoor API.
 License: GPL-2
-Imports: ipify
-Remotes: gregce/ipify
-Encoding: UTF-8
-LazyData: true
+BugReports: https://github.com/muschellij2/glassdoor/issues
+Imports: 
+    httr,
+    ipify,
+    rlang (>= 0.1.2)
 Suggests: 
+    covr,
     knitr,
     rmarkdown,
-    testthat,
-    covr
+    testthat
 VignetteBuilder: knitr
+Encoding: UTF-8
+LazyData: true
+Remotes: gregce/ipify
+RoxygenNote: 6.0.1.9000
+Url: https://github.com/muschellij2/glassdoor
+Depends: 
+    R (>= 3.1)

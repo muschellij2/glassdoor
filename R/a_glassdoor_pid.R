@@ -24,7 +24,26 @@ glassdoor_pat <- function(token = NULL, error = TRUE){
   return(token)
 }
 
+
 #' @rdname glassdoor_pid
+#' @export
+have_glassdoor_pid <- function(token = NULL){
+  token = glassdoor_pid(
+    token = token,
+    error = FALSE)
+  return(!is.null(token))
+}
+
+#' @rdname glassdoor_pid
+#' @export
+have_glassdoor_pat <- function(token = NULL){
+  token = glassdoor_pat(
+    token = token,
+    error = FALSE)
+  return(!is.null(token))
+}
+
+
 glassdoor_token <- function(token = NULL,
                             error = TRUE,
                             varname = "GLASSDOOR_PID"){
