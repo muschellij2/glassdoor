@@ -7,7 +7,9 @@
 #' @export
 #'
 #' @examples
+#' if (have_glassdoor_pid()) {
 #' glassdoor_pid()
+#' }
 glassdoor_pid <- function(token = NULL, error = TRUE){
   token = glassdoor_token(
     token = token, error = error,

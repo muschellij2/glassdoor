@@ -1,7 +1,7 @@
 Type: Package
 Package: glassdoor
 Title: Glassdoor API for R
-Version: 0.3
+Version: 0.3.1
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = "cre",

@@ -27,5 +27,7 @@ A vector of class character
 Glassdoor Partner ID
 }
 \examples{
+if (have_glassdoor_pid()) {
 glassdoor_pid()
+}
 }
