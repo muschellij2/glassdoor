@@ -16,7 +16,8 @@ Character Vector of IP
 Get IP Address
 }
 \note{
-Inspired by https://github.com/gregce/ipify/blob/master/R/ipify.R
+Inspired by
+\url{https://github.com/gregce/ipify/blob/master/R/ipify.R}
 }
 \examples{
 get_ip()

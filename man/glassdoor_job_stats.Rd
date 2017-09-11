@@ -31,10 +31,11 @@ here - city, state, or country.}
 old, etc.)}
 
 \item{jobType}{Scope the search to certain job types. Valid values are all
-(default), fulltime, parttime, internship, contract, internship, temporary}
+(default), \code{fulltime}, \code{parttime}, \code{internship},
+\code{contract}, \code{internship}, \code{temporary}}
 
 \item{minRating}{Scope the search to jobs of companies
-with rating >= minRating
+with rating >= \code{minRating}
 (0 = returns all (default), 1 = more than 1 star, 2 = more than 2 stars,
 3 = more than 3 stars, 4 = more than 4 stars)}
 
@@ -53,7 +54,7 @@ broken down by city.}
 
 \item{returnStates}{Results will include geographical data (job counts,
 score) broken down by the type of geographical district specified in
-parameter admLevelRequested.}
+parameter \code{admLevelRequested}.}
 
 \item{returnJobTitles}{Results will include job data broken down by job
 title.}
@@ -62,7 +63,7 @@ title.}
 employer.}
 
 \item{admLevelRequested}{Geographic district type requested when
-returnStates is true (1 = states, 2 = counties)}
+\code{returnStates} is true (1 = states, 2 = counties)}
 
 \item{query}{Additional options to pass to the query other than those
 specified here}

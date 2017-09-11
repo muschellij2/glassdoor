@@ -9,7 +9,7 @@
 #' @param q Query parameter (not a list) for Glassdoor
 #' @param version The API version. The current version is 1 except for
 #' jobs, which is currently version 1.1
-#' @param format Either xml or json as you prefer
+#' @param format Either \code{xml} or \code{json} as you prefer
 #' @param url Glassdoor RESTful API URL
 #' @param pid Your partner id, as assigned by Glassdoor
 #' @param pat Your partner key, as assigned by Glassdoor

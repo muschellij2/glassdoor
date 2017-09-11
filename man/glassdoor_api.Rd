@@ -24,7 +24,7 @@ jobs, which is currently version 1.1}
 
 \item{q}{Query parameter (not a list) for Glassdoor}
 
-\item{format}{Either xml or json as you prefer}
+\item{format}{Either \code{xml} or \code{json} as you prefer}
 
 \item{url}{Glassdoor RESTful API URL}
 

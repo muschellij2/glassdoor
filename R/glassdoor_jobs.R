@@ -12,9 +12,10 @@
 #' (-1 = show all jobs (default), 1 = 1 day old, 7 = 1 week old, 14 = 2 weeks
 #' old, etc.)
 #' @param jobType	Scope the search to certain job types. Valid values are all
-#' (default), fulltime, parttime, internship, contract, internship, temporary
+#' (default), \code{fulltime}, \code{parttime}, \code{internship},
+#' \code{contract}, \code{internship}, \code{temporary}
 #' @param minRating	Scope the search to jobs of companies
-#' with rating >= minRating
+#' with rating >= \code{minRating}
 #' (0 = returns all (default), 1 = more than 1 star, 2 = more than 2 stars,
 #' 3 = more than 3 stars, 4 = more than 4 stars)
 #' @param radius	Scope the search to jobs within a certain radius, in miles,
@@ -28,13 +29,13 @@
 #' broken down by city.
 #' @param returnStates	Results will include geographical data (job counts,
 #' score) broken down by the type of geographical district specified in
-#' parameter admLevelRequested.
+#' parameter \code{admLevelRequested}.
 #' @param returnJobTitles	Results will include job data broken down by job
 #' title.
 #' @param returnEmployers	Results will include job data broken down by
 #' employer.
 #' @param admLevelRequested	Geographic district type requested when
-#' returnStates is true (1 = states, 2 = counties)
+#' \code{returnStates} is true (1 = states, 2 = counties)
 #' @param query Additional options to pass to the query other than those
 #' specified here
 #' @export
