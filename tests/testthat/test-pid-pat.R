@@ -24,5 +24,5 @@ test_that("Glassdoor PID", {
 #   other = NULL,
 #   version = 1,
 #   format = "json",
-#   query = list(q = "pharmaceuticals"))
+#   q = "pharmaceuticals")
 # }

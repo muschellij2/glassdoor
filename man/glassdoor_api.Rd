@@ -4,9 +4,10 @@
 \alias{glassdoor_api}
 \title{General Glassdoor API function}
 \usage{
-glassdoor_api(action = NULL, other = NULL, agent = "Mozilla/5.0",
-  query = NULL, version = 1, format = "json", url = glassdoor_url(),
-  pid = glassdoor_pid(), pat = glassdoor_pat(), ip_address = NULL, ...)
+glassdoor_api(action = NULL, other = NULL, agent = glassdoor_user_agent(),
+  version = 1, q = NULL, format = "json", url = glassdoor_url(),
+  pid = glassdoor_pid(), pat = glassdoor_pat(), ip_address = NULL,
+  query = NULL, ...)
 }
 \arguments{
 \item{action}{The particular API call that you would like to make}
@@ -18,11 +19,10 @@ For example, an employerId is passed in order to retrieve reviews.}
 results will be shown. Note that you can can obtain this from the
 "User-Agent" HTTP request header from the end-user}
 
-\item{query}{Additional options to pass to the query other than those
-specified here}
-
 \item{version}{The API version. The current version is 1 except for
 jobs, which is currently version 1.1}
+
+\item{q}{Query parameter (not a list) for Glassdoor}
 
 \item{format}{Either xml or json as you prefer}
 
@@ -33,6 +33,9 @@ jobs, which is currently version 1.1}
 \item{pat}{Your partner key, as assigned by Glassdoor}
 
 \item{ip_address}{The IP address of the end user to whom the API results will be shown}
+
+\item{query}{Additional options to pass to the query other than those
+specified here}
 
 \item{...}{Additional options to send to \code{\link{GET}}}
 }
@@ -56,6 +59,6 @@ action = "employers",
 other = NULL,
   version = 1,
 format = "json",
-query = list(q = "pharmaceuticals"), config = list())
+q = "pharmaceuticals", config = list())
 }
 }

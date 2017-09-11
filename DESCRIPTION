@@ -1,7 +1,7 @@
 Type: Package
 Package: glassdoor
 Title: Glassdoor API for R
-Version: 0.3.1
+Version: 0.6
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = "cre",
@@ -12,7 +12,6 @@ License: GPL-2
 BugReports: https://github.com/muschellij2/glassdoor/issues
 Imports: 
     httr,
-    ipify,
     xml2
 Suggests: 
     covr,

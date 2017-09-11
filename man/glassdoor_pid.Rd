@@ -5,6 +5,7 @@
 \alias{glassdoor_pat}
 \alias{have_glassdoor_pid}
 \alias{have_glassdoor_pat}
+\alias{have_glassdoor_tokens}
 \title{Glassdoor Partner ID}
 \usage{
 glassdoor_pid(token = NULL, error = TRUE)
@@ -14,6 +15,8 @@ glassdoor_pat(token = NULL, error = TRUE)
 have_glassdoor_pid(token = NULL)
 
 have_glassdoor_pat(token = NULL)
+
+have_glassdoor_tokens()
 }
 \arguments{
 \item{token}{Partner ID or Authentication token}

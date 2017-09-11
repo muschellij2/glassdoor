@@ -12,10 +12,12 @@ vignette: >
 
 ```{r}
 library(glassdoor)
+if (have_glassdoor_tokens()) {
 res = glassdoor_api(
   action = "employers",
   other = NULL,
   version = 1,
   format = "json",
-  query = list(q = "pharmaceuticals"))
+  q = "pharmaceuticals")
+}
 ```

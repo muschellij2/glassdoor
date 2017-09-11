@@ -45,6 +45,12 @@ have_glassdoor_pat <- function(token = NULL){
   return(!is.null(token))
 }
 
+#' @rdname glassdoor_pid
+#' @export
+have_glassdoor_tokens <- function() {
+  have_glassdoor_pat() && have_glassdoor_pid()
+}
+
 
 glassdoor_token <- function(token = NULL,
                             error = TRUE,
