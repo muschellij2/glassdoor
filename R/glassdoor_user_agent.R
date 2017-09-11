@@ -4,8 +4,8 @@
 #' @export
 #'
 #' @examples
-#' glassdoor_user_agent()
+#' gd_user_agent()
 #'
-glassdoor_user_agent = function() {
+gd_user_agent = function() {
   "Mozilla/5.0"
 }

@@ -27,14 +27,14 @@ I recommend `.Renviron` as that works well with RStudio.
 # Calling the API
 
 
-The function `have_glassdoor_tokens` is a little wrapper that allows you to check if you have both API keys set.  
+The function `have_gd_tokens` is a little wrapper that allows you to check if you have both API keys set.  
 
 For example, the below code will look for `employers` and search for `pharmaceuticals` within them.
 
 ```{r}
 library(glassdoor)
-if (have_glassdoor_tokens()) {
-res = glassdoor_api(
+if (have_gd_tokens()) {
+res = gd_api(
   action = "employers",
   other = NULL,
   version = 1,
@@ -43,13 +43,13 @@ res = glassdoor_api(
 }
 ```
 
-The function used here is `glassdoor_api` which is the workhorse function of the package.   Generally, however, you probably want to use `glassdoor_job_stats`, `glassdoor_job_prog`, or `glassdoor_company`.
+The function used here is `gd_api` which is the workhorse function of the package.   Generally, however, you probably want to use `gd_job_stats`, `gd_job_prog`, or `gd_company`.
 
 ## Job Statistics 
 
-Most of the defaults in `glassdoor_api` do not need to be set, but the User-Agent defaults to 
+Most of the defaults in `gd_api` do not need to be set, but the User-Agent defaults to 
 ```{r}
-agent = glassdoor_user_agent()
+agent = gd_user_agent()
 ```
 
 If you would like to change this, simply specify the `agent` argument in the `glassdoor` functions.
@@ -57,8 +57,8 @@ If you would like to change this, simply specify the `agent` argument in the `gl
 The job statistics specification can be found https://www.glassdoor.com/developer/jobsApiActions.htm#JobsStats. 
 
 ```{r}
-if (have_glassdoor_tokens()) {
-  res = glassdoor_job_stats(
+if (have_gd_tokens()) {
+  res = gd_job_stats(
     job_title = "sales associate",
     returnJobTitles = TRUE)
     head(res$content$response$jobTitles, 3)
@@ -71,8 +71,8 @@ The job statistics specification can be found https://www.glassdoor.com/develope
 
 ```{r}
 job_name = "sales associate"
-if (have_glassdoor_tokens()) {
-  res = glassdoor_job_prog(
+if (have_gd_tokens()) {
+  res = gd_job_prog(
     jobTitle = job_name)
   head(res$content$response$results, 2)
 }
@@ -82,12 +82,12 @@ which gives the percentage of transitions to another profession after being a `r
 
 ## Employers
 
-You can also access information from employers from `glassdoor_company` or the 
-duplicate function `glassdoor_employer`:
+You can also access information from employers from `gd_company` or the 
+duplicate function `gd_employer`:
 
 ```{r}
-if (have_glassdoor_tokens()) {
-  res = glassdoor_company(
+if (have_gd_tokens()) {
+  res = gd_company(
     q = "dropbox")
   print(res$content$response$employers[[1]]$ceo)
 }

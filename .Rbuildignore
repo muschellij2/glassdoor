@@ -5,4 +5,5 @@
 ^codecov\.yml$
 ^cran-comments\.md$
 ^README\.Rmd$
-docs/
+inst/doc/*
+^docs$

@@ -7,52 +7,52 @@
 #' @export
 #'
 #' @examples
-#' if (have_glassdoor_pid()) {
-#' glassdoor_pid()
+#' if (have_gd_pid()) {
+#' gd_pid()
 #' }
-glassdoor_pid <- function(token = NULL, error = TRUE){
-  token = glassdoor_token(
+gd_pid <- function(token = NULL, error = TRUE){
+  token = gd_token(
     token = token, error = error,
     varname = "GLASSDOOR_PID")
   return(token)
 }
 
-#' @rdname glassdoor_pid
+#' @rdname gd_pid
 #' @export
-glassdoor_pat <- function(token = NULL, error = TRUE){
-  token = glassdoor_token(
+gd_pat <- function(token = NULL, error = TRUE){
+  token = gd_token(
     token = token, error = error,
     varname = "GLASSDOOR_PAT")
   return(token)
 }
 
 
-#' @rdname glassdoor_pid
+#' @rdname gd_pid
 #' @export
-have_glassdoor_pid <- function(token = NULL){
-  token = glassdoor_pid(
+have_gd_pid <- function(token = NULL){
+  token = gd_pid(
     token = token,
     error = FALSE)
   return(!is.null(token))
 }
 
-#' @rdname glassdoor_pid
+#' @rdname gd_pid
 #' @export
-have_glassdoor_pat <- function(token = NULL){
-  token = glassdoor_pat(
+have_gd_pat <- function(token = NULL){
+  token = gd_pat(
     token = token,
     error = FALSE)
   return(!is.null(token))
 }
 
-#' @rdname glassdoor_pid
+#' @rdname gd_pid
 #' @export
-have_glassdoor_tokens <- function() {
-  have_glassdoor_pat() && have_glassdoor_pid()
+have_gd_tokens <- function() {
+  have_gd_pat() && have_gd_pid()
 }
 
 
-glassdoor_token <- function(token = NULL,
+gd_token <- function(token = NULL,
                             error = TRUE,
                             varname = "GLASSDOOR_PID"){
   if (is.null(token)) {

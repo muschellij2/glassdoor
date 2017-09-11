@@ -1,6 +1,6 @@
 #' Glassdoor Job Progression
 #'
-#' @param ... arguments to pass to \code{\link{glassdoor_api}}
+#' @param ... arguments to pass to \code{\link{gd_api}}
 #' @param jobTitle Job Title - the job title to get related jobs for
 #' @param countryId	Country Id - only 1 (US) is supported right now.
 #' @param query Additional options to pass to the query other than those
@@ -8,13 +8,13 @@
 #' @export
 #'
 #' @examples
-#' if (have_glassdoor_tokens()) {
+#' if (have_gd_tokens()) {
 #'
 #' paste0("&countryId=1&jobTitle=cashier")
-#' res = glassdoor_job_prog(jobTitle = "cashier", countryId = 1)
+#' res = gd_job_prog(jobTitle = "cashier", countryId = 1)
 #' }
 #'
-glassdoor_job_prog <- function(
+gd_job_prog <- function(
   ...,
   jobTitle,
   countryId = 1,
@@ -45,7 +45,7 @@ glassdoor_job_prog <- function(
 
   args$query = qq
 
-  res = do.call("glassdoor_api", args)
+  res = do.call("gd_api", args)
 
   return(res)
 }

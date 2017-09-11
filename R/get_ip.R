@@ -10,7 +10,7 @@
 #' @export
 #' @examples
 #' get_ip()
-get_ip = function(agent = glassdoor_user_agent()) {
+get_ip = function(agent = gd_user_agent()) {
   url = "https://api.ipify.org"
   ip_address = httr::GET(url = url, httr::user_agent(agent))
                          # query = list(format = json"))

@@ -18,19 +18,19 @@
 #' specified here
 #' @param ... Additional options to send to \code{\link{GET}}
 #'
-#' @return A list of class \code{glassdoor_api}
+#' @return A list of class \code{gd_api}
 #' @export
 #'
 #' @examples
-#' if (have_glassdoor_pid() && have_glassdoor_pat()) {
-#' res = glassdoor_api(
+#' if (have_gd_pid() && have_gd_pat()) {
+#' res = gd_api(
 #' action = "employers",
 #' other = NULL,
 #'   version = 1,
 #' format = "json",
 #' query = list(q = "pharmaceuticals"))
 #'
-#' res = glassdoor_api(
+#' res = gd_api(
 #' action = "employers",
 #' other = NULL,
 #'   version = 1,
@@ -38,16 +38,16 @@
 #' q = "pharmaceuticals", config = list())
 #' }
 #' @importFrom httr content GET
-glassdoor_api <- function(
+gd_api <- function(
   action = NULL,
   other = NULL,
-  agent = glassdoor_user_agent(),
+  agent = gd_user_agent(),
   version = 1,
   q = NULL,
   format = "json",
-  url = glassdoor_url(),
-  pid = glassdoor_pid(),
-  pat = glassdoor_pat(),
+  url = gd_url(),
+  pid = gd_pid(),
+  pat = gd_pat(),
   ip_address = NULL,
   query = NULL,
   ...
@@ -91,6 +91,6 @@ glassdoor_api <- function(
     query = qq,
     response = res
   ),
-  class = "glassdoor_api")
+  class = "gd_api")
   return(exported)
 }

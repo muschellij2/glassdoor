@@ -1,6 +1,6 @@
 #' Glassdoor Job Stats
 #'
-#' @param ... arguments to pass to \code{\link{glassdoor_api}}
+#' @param ... arguments to pass to \code{\link{gd_api}}
 #' @param employer	Scope the search to a specific employer by
 #' specifying the name here.
 #' @param location	Scope the search to a specific location by specifying it
@@ -40,12 +40,12 @@
 #' specified here
 #' @export
 #' @examples
-#' if (have_glassdoor_tokens()) {
+#' if (have_gd_tokens()) {
 #'
 #' paste0("returnStates=true&admLevelRequested=1")
-#' res = glassdoor_job_stats(returnStates = TRUE, admLevelRequested = 1)
+#' res = gd_job_stats(returnStates = TRUE, admLevelRequested = 1)
 #' }
-glassdoor_job_stats <- function(
+gd_job_stats <- function(
   ...,
   employer = NULL,
   location = NULL,
@@ -132,7 +132,7 @@ glassdoor_job_stats <- function(
 
   args$query = qq
 
-  res = do.call("glassdoor_api", args)
+  res = do.call("gd_api", args)
 
   return(res)
 }

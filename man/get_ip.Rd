@@ -4,7 +4,7 @@
 \alias{get_ip}
 \title{Get IP Address}
 \usage{
-get_ip(agent = glassdoor_user_agent())
+get_ip(agent = gd_user_agent())
 }
 \arguments{
 \item{agent}{User Agent for Header}

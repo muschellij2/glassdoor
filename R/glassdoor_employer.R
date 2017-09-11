@@ -1,6 +1,6 @@
 #' Glassdoor Company Search
 #'
-#' @param ... arguments to pass to \code{\link{glassdoor_api}}
+#' @param ... arguments to pass to \code{\link{gd_api}}
 #' @param location Scope the search to a specific location by specifying it
 #' here - city, state, or country.
 #' @param city	Scope the search to a specific city by specifying it here.
@@ -14,13 +14,13 @@
 #' @export
 #'
 #' @examples
-#' if (have_glassdoor_tokens()) {
+#' if (have_gd_tokens()) {
 #'
 #' paste0("action=employers")
-#' res = glassdoor_company()
+#' res = gd_company()
 #' }
 #'
-glassdoor_company <- function(
+gd_company <- function(
   ...,
   location = NULL,
   city = NULL,
@@ -61,11 +61,11 @@ glassdoor_company <- function(
 
   args$query = qq
 
-  res = do.call("glassdoor_api", args)
+  res = do.call("gd_api", args)
 
   return(res)
 }
 
-#' @rdname glassdoor_company
+#' @rdname gd_company
 #' @export
-glassdoor_employer = glassdoor_company
+gd_employer = gd_company

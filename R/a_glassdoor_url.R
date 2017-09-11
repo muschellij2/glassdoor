@@ -5,7 +5,7 @@
 #' @export
 #'
 #' @examples
-#' glassdoor_url()
-glassdoor_url = function() {
+#' gd_url()
+gd_url = function() {
   return("http://api.glassdoor.com/api/api.htm")
 }

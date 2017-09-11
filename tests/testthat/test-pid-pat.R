@@ -1,25 +1,25 @@
 test_that("Glassdoor PAT", {
-  if (!have_glassdoor_pat()) {
-    expect_error(glassdoor_pat(error = TRUE))
+  if (!have_gd_pat()) {
+    expect_error(gd_pat(error = TRUE))
   } else {
-    expect_silent(glassdoor_pat(error = TRUE))
+    expect_silent(gd_pat(error = TRUE))
   }
-  expect_error(glassdoor_pat(token = "", error = TRUE))
+  expect_error(gd_pat(token = "", error = TRUE))
 
 })
 
 
 test_that("Glassdoor PID", {
-  if (!have_glassdoor_pid()) {
-    expect_error(glassdoor_pid(error = TRUE))
+  if (!have_gd_pid()) {
+    expect_error(gd_pid(error = TRUE))
   } else {
-    expect_silent(glassdoor_pid(error = TRUE))
+    expect_silent(gd_pid(error = TRUE))
   }
-  expect_error(glassdoor_pid(token = "", error = TRUE))
+  expect_error(gd_pid(token = "", error = TRUE))
 
 })
 #
-# res = glassdoor_api(
+# res = gd_api(
 #   action = "employers",
 #   other = NULL,
 #   version = 1,
