@@ -8,8 +8,8 @@
 0 errors | 0 warnings | 1 note
 
 * This is a new release.
-* Any warnings in README.md are about the badges in there for Travis, Appveyor,
-CRAN, or Coveralls.
+* Any warnings related to README.md are about the badges 
+in there for Travis, Appveyor, CRAN, or Coveralls.
 
 ## Reverse dependencies
 
