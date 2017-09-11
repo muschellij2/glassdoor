@@ -5,7 +5,8 @@
 #'
 #' @return Character Vector of IP
 #' @export
-#' @note Inspired by https://github.com/gregce/ipify/blob/master/R/ipify.R
+#' @note Inspired by
+#' \url{https://github.com/gregce/ipify/blob/master/R/ipify.R}
 #' @export
 #' @examples
 #' get_ip()
