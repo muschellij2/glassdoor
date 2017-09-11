@@ -1,6 +1,6 @@
 ---
 title: "Running the Glassdoor API"
-author: "Vignette Author"
+author: "John Muschelli"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -9,6 +9,27 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+# Glassdoor API Keys
+In order to use the `glassdoor` package, you need an API key from Glassdoor (either https://www.glassdoor.com/developer/register_input.htm or click Get API key from  https://www.glassdoor.com/developer/index.htm).  
+
+After that is done, you need to set up the API keys.  The keys are grabbed using 
+```{r, eval = FALSE}
+Sys.getenv("GLASSDOOR_PID")
+Sys.getenv("GLASSDOOR_PAT")
+```
+
+so you can set these either using `~/.Renviron` (will work generally) or your standard `.profile` or `.bash_profile` (if you work with command lines).
+
+I recommend `.Renviron` as that works well with RStudio.
+
+
+
+# Calling the API
+
+
+The function `have_glassdoor_tokens` is a little wrapper that allows you to check if you have both API keys set.  
+
+For example, the below code will look for `employers` and search for `pharmaceuticals` within them.
 
 ```{r}
 library(glassdoor)
@@ -19,5 +40,55 @@ res = glassdoor_api(
   version = 1,
   format = "json",
   q = "pharmaceuticals")
+}
+```
+
+The function used here is `glassdoor_api` which is the workhorse function of the package.   Generally, however, you probably want to use `glassdoor_job_stats`, `glassdoor_job_prog`, or `glassdoor_company`.
+
+## Job Statistics 
+
+Most of the defaults in `glassdoor_api` do not need to be set, but the User-Agent defaults to 
+```{r}
+agent = glassdoor_user_agent()
+```
+
+If you would like to change this, simply specify the `agent` argument in the `glassdoor` functions.
+
+The job statistics specification can be found https://www.glassdoor.com/developer/jobsApiActions.htm#JobsStats. 
+
+```{r}
+if (have_glassdoor_tokens()) {
+  res = glassdoor_job_stats(
+    job_title = "sales associate",
+    returnJobTitles = TRUE)
+    head(res$content$response$jobTitles, 3)
+}
+```
+
+## Job Progression 
+
+The job statistics specification can be found https://www.glassdoor.com/developer/jobsApiActions.htm#JobProgression.
+
+```{r}
+job_name = "sales associate"
+if (have_glassdoor_tokens()) {
+  res = glassdoor_job_prog(
+    jobTitle = job_name)
+  head(res$content$response$results, 2)
+}
+```
+which gives the percentage of transitions to another profession after being a `r job_name`
+
+
+## Employers
+
+You can also access information from employers from `glassdoor_company` or the 
+duplicate function `glassdoor_employer`:
+
+```{r}
+if (have_glassdoor_tokens()) {
+  res = glassdoor_company(
+    q = "dropbox")
+  print(res$content$response$employers[[1]]$ceo)
 }
 ```
