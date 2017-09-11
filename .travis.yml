@@ -6,15 +6,16 @@ r:
 - oldrel
 - release
 - devel
+
 after_success:
 - Rscript -e 'covr::coveralls(type = "all")'
 
 deploy:
   provider: releases
-  skip_cleanup: true  
+  skip_cleanup: true
   api_key:
     secure: R87FLmqHznKiPLRVACsgoTMaWkposoMyP8/uLMA8oaf7tVLH/b9vCqK9RBRHQAzyqO2R/pNN5oserNuu3V0b6aahRSvee1VdbC8fg6ULT9MCOLotw6sEz5+W5q7mxJsk4SQ99EZ0nk/CUBQDiiciQyt/Xx8cx4PRGLPu04SILkVw/Rn3+cWqEXKMvf72p8ePcyQtnheHbGVRJF9XcozIxhKHS9PH/4VZfqP8d/mr2yFnq3vSLPSxT5ODdzS+p1AdYVnlZL56+vr4meOY5sEQPd95tT7d0HhJJFTbogj5CEIWqaVAJHRe4MU//8f/1YxKXMPP2VNBPMp97k7dktwlZarsU94jQEKHdONLMxuqKVOCYembD7ZeSwRaLgg1aQfO7CrFoVr6zs3gPqkydDpeiJHNEiCEyiMt1dEOPusmF6OD/yeXwYrtmmrNvCN0YiV6ONWNRWVyGoMBjoAFTXsGXwfpdJUvLj93z9YoFFK4v5isaa8ZcoHsvCv591Q5jb8Z3AVhblER82eNhARCBTPEC5zgz2U5WlP73z9yv8gduyW6oCROzif/vR6+BorgmmIz1UTLTK0glcXAbYWqKIXQ7/dq7jXgzFXqAl8lmATfRBr4/yl9/K2nQoUPPHXZ/Amrdf1egGWE8NvykoOlAxBMa7rhKics2NJFu1LDECbPfMI=
   file: glassdoor*.t*gz
   on:
-    tags: true    
+    tags: true
     repo: muschellij2/glassdoor
