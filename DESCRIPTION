@@ -1,0 +1,20 @@
+Package: glassdoor
+Type: Package
+Title: R GLassdoor API
+Version: 0.1.0
+Authors@R: person(given = "John",
+           family = "Muschelli",
+           role = "cre",
+           email = "muschellij2@gmail.com")
+Maintainer: John Muschelli <muschellij2@gmail.com>
+Description: Interacts with the Glassdoor API.
+License: GPL-2
+Imports: ipify
+Remotes: gregce/ipify
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
