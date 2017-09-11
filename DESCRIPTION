@@ -1,13 +1,14 @@
 Type: Package
 Package: glassdoor
-Title: Glassdoor API for R
+Title: 'Glassdoor' API for R
 Version: 0.6
 Authors@R: person(given = "John",
            family = "Muschelli",
-           role = "cre",
+           role = c("aut", "cre"),
            email = "muschellij2@gmail.com")
 Maintainer: John Muschelli <muschellij2@gmail.com>
-Description: Interacts with the Glassdoor API.
+Description: Interacts with the 'Glassdoor' API 
+    <https://www.glassdoor.com/developer/index.htm>.
 License: GPL-2
 BugReports: https://github.com/muschellij2/glassdoor/issues
 Imports: 
@@ -21,8 +22,6 @@ Suggests:
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-Remotes: r-lib/httr
 RoxygenNote: 6.0.1.9000
-Url: https://github.com/muschellij2/glassdoor
 Depends: 
     R (>= 3.1)

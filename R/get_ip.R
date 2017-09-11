@@ -12,5 +12,6 @@
 get_ip = function(agent = glassdoor_user_agent()) {
   url = "https://api.ipify.org"
   ip_address = httr::GET(url = url, httr::user_agent(agent))
+                         # query = list(format = json"))
   ip_address = httr::content(ip_address, encoding = "UTF-8")
 }
