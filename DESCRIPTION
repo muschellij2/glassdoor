@@ -21,7 +21,7 @@ Suggests:
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-Remotes: gregce/ipify, r-lib/httr
+Remotes: r-lib/httr
 RoxygenNote: 6.0.1.9000
 Url: https://github.com/muschellij2/glassdoor
 Depends: 
