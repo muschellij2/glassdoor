@@ -2,7 +2,7 @@
 #'
 #' @param action The particular API call that you would like to make
 #' @param other Each API action will require different parameters
-#' For example, an employerId is passed in order to retrieve reviews.
+#' For example, an \code{employerId} is passed in order to retrieve reviews.
 #' @param agent The User-Agent (browser) of the end user to whom the API
 #' results will be shown. Note that you can can obtain this from the
 #' "User-Agent" HTTP request header from the end-user
