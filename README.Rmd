@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
 ```
 # glassdoor
 
+[![JHU Data Science](http://johnmuschelli.com/jhudsl/inst/jhudsl_logo.png)](http://jhudatascience.org/)
+
 The goal of glassdoor is to provide a Glassdoor API for R
 
   [![Travis build status](https://travis-ci.org/muschellij2/glassdoor.svg?branch=master)](https://travis-ci.org/muschellij2/glassdoor)
