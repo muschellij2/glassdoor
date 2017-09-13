@@ -1,4 +1,4 @@
-# glassdoor 0.7.4
+# glassdoor 0.7.5
 
 * Fixed `DESCRIPTION` file and submitting to CRAN.
 
