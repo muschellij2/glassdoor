@@ -85,6 +85,7 @@ gd_api <- function(
   # qq = c(qq, query)
 
   res = httr::GET(url, query = qq, ...)
+
   #
   exported = structure(list(
     content = httr::content(res),
@@ -92,5 +93,11 @@ gd_api <- function(
     response = res
   ),
   class = "gd_api")
+
+  httr::warn_for_status(exported$response)
+  gd_success = as.logical(exported$content$success)
+  if (!gd_success) {
+    warning("Glassdoor did not indicate successful retrieval!")
+  }
   return(exported)
 }

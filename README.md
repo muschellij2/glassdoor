@@ -3,9 +3,14 @@
 glassdoor
 =========
 
+[![JHU Data Science](jhudsl_logo.png)](http://jhudatascience.org/)
+
+
 The goal of glassdoor is to provide a Glassdoor API for R
 
 [![Travis build status](https://travis-ci.org/muschellij2/glassdoor.svg?branch=master)](https://travis-ci.org/muschellij2/glassdoor) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/glassdoor?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/glassdoor) [![Coverage status](https://coveralls.io/repos/github/muschellij2/glassdoor/badge.svg?branch=master)](https://coveralls.io/r/muschellij2/glassdoor?branch=master) [![CRAN status](http://www.r-pkg.org/badges/version/glassdoor)](https://cran.r-project.org/package=glassdoor)
+
+
 
 Installation
 ------------
