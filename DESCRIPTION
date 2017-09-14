@@ -8,10 +8,10 @@ Authors@R: person(given = "John",
            email = "muschellij2@gmail.com")
 Maintainer: John Muschelli <muschellij2@gmail.com>
 Description: Interacts with the 'Glassdoor' API
-  <https://www.glassdoor.com/developer/index.htm>. Allows the user to 
-  search job statistics, employer statistics, and job progression, 
-  where 'Glassdoor' provides a breakdown of other jobs a person did 
-  after their current one.
+    <https://www.glassdoor.com/developer/index.htm>. Allows the user to
+    search job statistics, employer statistics, and job progression,
+    where 'Glassdoor' provides a breakdown of other jobs a person did
+    after their current one.
 License: GPL-2
 BugReports: https://github.com/muschellij2/glassdoor/issues
 Imports: 
