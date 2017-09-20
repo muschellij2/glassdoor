@@ -3,7 +3,7 @@
 glassdoor
 =========
 
-[![JHU Data Science](http://johnmuschelli.com/jhudsl/inst/jhudsl_logo.png)](http://jhudatascience.org/)
+[![JHU Data Science](http://johnmuschelli.com/jhudsl/inst/jhudsl_logo.png)](http://jhudatascience.org/) <br> ![Sticker](sticker.png)
 
 The goal of glassdoor is to provide a Glassdoor API for R
 
@@ -34,3 +34,5 @@ Sys.getenv("GLASSDOOR_PAT")
 so you can set these either using `~/.Renviron` (will work generally) or your standard `.profile` or `.bash_profile` (if you work with command lines).
 
 I recommend `.Renviron` as that works well with RStudio.
+
+Image downloaded from: <http://resultatdu5eme.com/commercial-glass-door-H31373/commercial-glass-door-r-on-fabulous-commercial-glass-door-26-for-beautiful-home-decorating/>
