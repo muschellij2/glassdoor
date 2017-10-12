@@ -12,3 +12,6 @@ icon\.psd
 icon_black\.png
 sticker\.R
 sticker\.png
+^icon\.png$
+^sticker\.R$
+^sticker\.png$
