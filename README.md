@@ -3,7 +3,7 @@
 glassdoor
 =========
 
-[![JHU Data Science](http://johnmuschelli.com/jhudsl/inst/jhudsl_logo.png)](http://jhudatascience.org/) <br> <!-- ![Sticker](sticker.png) --> <img src="sticker.png" width="100">
+[![JHU Data Science](http://johnmuschelli.com/jhudsl/inst/jhudsl_logo.png)](http://jhudatascience.org/) <br> <!-- ![Sticker](sticker.png) --> <img src="sticker.jpg" width="100">
 
 The goal of glassdoor is to provide a Glassdoor API for R
 
