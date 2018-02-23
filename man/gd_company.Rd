@@ -3,15 +3,24 @@
 \name{gd_company}
 \alias{gd_company}
 \alias{gd_employer}
+\alias{gd_company_df}
+\alias{gd_employer_df}
 \title{Glassdoor Company Search}
 \usage{
-gd_company(..., location = NULL, city = NULL, state = NULL,
-  country = NULL, page_number = NULL, page_size = NULL, query = NULL)
+gd_company(query = NULL, ..., location = NULL, city = NULL,
+  state = NULL, country = NULL, page_number = NULL, page_size = NULL)
 
-gd_employer(..., location = NULL, city = NULL, state = NULL,
-  country = NULL, page_number = NULL, page_size = NULL, query = NULL)
+gd_employer(query = NULL, ..., location = NULL, city = NULL,
+  state = NULL, country = NULL, page_number = NULL, page_size = NULL)
+
+gd_company_df(...)
+
+gd_employer_df(...)
 }
 \arguments{
+\item{query}{Additional options to pass to the query other than those
+specified here}
+
 \item{...}{arguments to pass to \code{\link{gd_api}}}
 
 \item{location}{Scope the search to a specific location by specifying it
@@ -27,9 +36,6 @@ here - city, state, or country.}
 
 \item{page_size}{Page size, i.e. the number of jobs returned on
 each page of results. Default is 20.}
-
-\item{query}{Additional options to pass to the query other than those
-specified here}
 }
 \description{
 Glassdoor Company Search
@@ -37,8 +43,10 @@ Glassdoor Company Search
 \examples{
 if (have_gd_tokens()) {
 
-paste0("action=employers")
-res = gd_company()
+res = gd_company_df("walmart")
+head(res[, c("id", "name")])
+res = gd_company_df("Target")
+res = gd_company("Dropbox")
 }
 
 }

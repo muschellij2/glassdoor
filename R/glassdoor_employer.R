@@ -16,19 +16,21 @@
 #' @examples
 #' if (have_gd_tokens()) {
 #'
-#' paste0("action=employers")
-#' res = gd_company()
+#' res = gd_company_df("walmart")
+#' head(res[, c("id", "name")])
+#' res = gd_company_df("Target")
+#' res = gd_company("Dropbox")
 #' }
 #'
 gd_company <- function(
+  query = NULL,
   ...,
   location = NULL,
   city = NULL,
   state = NULL,
   country = NULL,
   page_number = NULL,
-  page_size = NULL,
-  query = NULL
+  page_size = NULL
 ) {
 
   action = "employers"
@@ -51,13 +53,7 @@ gd_company <- function(
 
   no_null = vapply(qq, function(x) !all(is.null(x)), logical(1))
   qq = qq[no_null]
-
-  qnames = names(query)
-  if (length(query) > 0) {
-    for (iname in qnames) {
-      qq[[iname]] = query[[iname]]
-    }
-  }
+  qq$query = query
 
   args$query = qq
 
@@ -69,3 +65,18 @@ gd_company <- function(
 #' @rdname gd_company
 #' @export
 gd_employer = gd_company
+
+
+#' @rdname gd_company
+#' @export
+gd_company_df = function(...) {
+  res = gd_employer(...)
+  df = bind_list(res$content$response$employers)
+  return(df)
+}
+
+#' @rdname gd_company
+#' @export
+gd_employer_df = gd_company_df
+
+

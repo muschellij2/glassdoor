@@ -43,7 +43,7 @@ gd_job_prog <- function(
     }
   }
 
-  args$query = qq
+  args$add_query = qq
 
   res = do.call("gd_api", args)
   class(res) = c(class(res), "gd_job_prog")

@@ -4,15 +4,15 @@
 \alias{gd_api}
 \title{General Glassdoor API function}
 \usage{
-gd_api(action = NULL, other = NULL, agent = gd_user_agent(),
-  version = 1, q = NULL, format = "json", url = gd_url(),
-  pid = gd_pid(), pat = gd_pat(), ip_address = NULL, query = NULL, ...)
+gd_api(query = NULL, action = NULL, agent = gd_user_agent(),
+  version = 1, format = "json", url = gd_url(), pid = gd_pid(),
+  pat = gd_pat(), ip_address = NULL, add_query = NULL, ...)
 }
 \arguments{
-\item{action}{The particular API call that you would like to make}
+\item{query}{Additional options to pass to the query other than those
+specified here}
 
-\item{other}{Each API action will require different parameters
-For example, an \code{employerId} is passed in order to retrieve reviews.}
+\item{action}{The particular API call that you would like to make}
 
 \item{agent}{The User-Agent (browser) of the end user to whom the API
 results will be shown. Note that you can can obtain this from the
@@ -20,8 +20,6 @@ results will be shown. Note that you can can obtain this from the
 
 \item{version}{The API version. The current version is 1 except for
 jobs, which is currently version 1.1}
-
-\item{q}{Query parameter (not a list) for Glassdoor}
 
 \item{format}{Either \code{xml} or \code{json} as you prefer}
 
@@ -33,8 +31,8 @@ jobs, which is currently version 1.1}
 
 \item{ip_address}{The IP address of the end user to whom the API results will be shown}
 
-\item{query}{Additional options to pass to the query other than those
-specified here}
+\item{add_query}{Additional options to pass to the query other than those
+specified here (named list)}
 
 \item{...}{Additional options to send to \code{\link{GET}}}
 }
@@ -51,13 +49,13 @@ action = "employers",
 other = NULL,
   version = 1,
 format = "json",
-query = list(q = "pharmaceuticals"))
+query =  "pharmaceuticals")
 
 res = gd_api(
 action = "employers",
 other = NULL,
-  version = 1,
+ version = 1,
 format = "json",
-q = "pharmaceuticals", config = list())
+query = "pharmaceuticals", config = list())
 }
 }
