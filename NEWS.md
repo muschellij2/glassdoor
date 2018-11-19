@@ -2,6 +2,7 @@
 
 * Added `gd_employer_df`, `gd_review`, and `gd_company_df`.
 * Fixed the `query` argument in general API, which may break some code, but more clean in the future.
+* Removed `xml2` dependency as not needed.
 
 # glassdoor 0.7.5
 

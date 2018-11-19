@@ -15,8 +15,7 @@ Description: Interacts with the 'Glassdoor' API
 License: GPL-2
 BugReports: https://github.com/muschellij2/glassdoor/issues
 Imports: 
-  httr,
-  xml2
+  httr
 Suggests: 
   covr,
   knitr,
