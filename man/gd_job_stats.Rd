@@ -4,15 +4,18 @@
 \alias{gd_job_stats}
 \title{Glassdoor Job Stats}
 \usage{
-gd_job_stats(..., employer = NULL, location = NULL, city = NULL,
-  state = NULL, country = NULL, fromAge = NULL, jobType = NULL,
-  minRating = NULL, radius = NULL, job_title = NULL,
-  job_category = NULL, returnCities = NULL, returnStates = NULL,
-  returnJobTitles = NULL, returnEmployers = NULL,
-  admLevelRequested = NULL, query = NULL)
+gd_job_stats(..., query = NULL, employer = NULL, location = NULL,
+  city = NULL, state = NULL, country = NULL, fromAge = NULL,
+  jobType = NULL, minRating = NULL, radius = NULL,
+  job_title = NULL, job_category = NULL, returnCities = NULL,
+  returnStates = NULL, returnJobTitles = NULL,
+  returnEmployers = NULL, admLevelRequested = NULL)
 }
 \arguments{
 \item{...}{arguments to pass to \code{\link{gd_api}}}
+
+\item{query}{Additional options to pass to the query other than those
+specified here}
 
 \item{employer}{Scope the search to a specific employer by
 specifying the name here.}
@@ -64,9 +67,6 @@ employer.}
 
 \item{admLevelRequested}{Geographic district type requested when
 \code{returnStates} is true (1 = states, 2 = counties)}
-
-\item{query}{Additional options to pass to the query other than those
-specified here}
 }
 \description{
 Glassdoor Job Stats

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • glassdoor</title>
+<title>Glassdoor Company Search — gd_review • glassdoor</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Glassdoor Company Search — gd_review" />
+
+<meta property="og:description" content="Glassdoor Company Search" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -46,7 +49,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -102,96 +105,64 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Glassdoor Company Search</h1>
+    
+    <div class="hidden name"><code>gd_review.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Glassdoor Company Search</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="gd_api.html">gd_api()</a></code> </p>
-        </td>
-        <td><p>General Glassdoor API function</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_company.html">gd_company()</a></code> <code><a href="gd_company.html">gd_employer()</a></code> <code><a href="gd_company.html">gd_company_df()</a></code> <code><a href="gd_company.html">gd_employer_df()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Company Search</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_job_prog.html">gd_job_prog()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Job Progression</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_job_stats.html">gd_job_stats()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Job Stats</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_pid.html">gd_pid()</a></code> <code><a href="gd_pid.html">gd_pat()</a></code> <code><a href="gd_pid.html">have_gd_pid()</a></code> <code><a href="gd_pid.html">have_gd_pat()</a></code> <code><a href="gd_pid.html">have_gd_tokens()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Partner ID</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_review.html">gd_review()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Company Search</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_url.html">gd_url()</a></code> </p>
-        </td>
-        <td><p>Glassdoor URL</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_user_agent.html">gd_user_agent()</a></code> </p>
-        </td>
-        <td><p>Glassdoor User Agent</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_ip.html">get_ip()</a></code> </p>
-        </td>
-        <td><p>Get IP Address</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="results.html">results()</a></code> </p>
-        </td>
-        <td><p>Results of a Glassdoor object</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>gd_review</span>(<span class='no'>employer_id</span>, <span class='no'>...</span>, <span class='kw'>page_number</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>page_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>employer_id</th>
+      <td><p>Glassdoor ID for the company, can be accessed using
+<code><a href='gd_company.html'>gd_company</a></code></p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments to pass to <code><a href='gd_api.html'>gd_api</a></code></p></td>
+    </tr>
+    <tr>
+      <th>page_number</th>
+      <td><p>Page number to retrieve. Default is 1.</p></td>
+    </tr>
+    <tr>
+      <th>page_size</th>
+      <td><p>Page size, i.e. the number of jobs returned on
+each page of results. Default is 20.</p></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><p>Additional options to pass to the query other than those
+specified here</p></td>
+    </tr>
     </table>
-  </div>
+    
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='gd_pid.html'>have_gd_tokens</a></span>()) {
+<span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>gd_review</span>(<span class='kw'>employer_id</span> <span class='kw'>=</span> <span class='fl'>715</span>) <span class='co'># walmart</span>
+}</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+            
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 

@@ -47,6 +47,7 @@
 #' }
 gd_job_stats <- function(
   ...,
+  query = NULL,
   employer = NULL,
   location = NULL,
   city = NULL,
@@ -62,9 +63,7 @@ gd_job_stats <- function(
   returnStates = NULL,
   returnJobTitles = NULL,
   returnEmployers = NULL,
-  admLevelRequested = NULL,
-  query = NULL
-) {
+  admLevelRequested = NULL) {
 
   action = "jobs-stats"
   args = list(...)

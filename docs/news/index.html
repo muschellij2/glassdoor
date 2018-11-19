@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • glassdoor</title>
+<title>Changelog • glassdoor</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Changelog" />
 
 
 
@@ -46,7 +46,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -102,97 +102,51 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+      <h1>Changelog <small></small></h1>
+      
     </div>
 
-    <table class="ref-index">
-
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="gd_api.html">gd_api()</a></code> </p>
-        </td>
-        <td><p>General Glassdoor API function</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_company.html">gd_company()</a></code> <code><a href="gd_company.html">gd_employer()</a></code> <code><a href="gd_company.html">gd_company_df()</a></code> <code><a href="gd_company.html">gd_employer_df()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Company Search</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_job_prog.html">gd_job_prog()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Job Progression</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_job_stats.html">gd_job_stats()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Job Stats</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_pid.html">gd_pid()</a></code> <code><a href="gd_pid.html">gd_pat()</a></code> <code><a href="gd_pid.html">have_gd_pid()</a></code> <code><a href="gd_pid.html">have_gd_pat()</a></code> <code><a href="gd_pid.html">have_gd_tokens()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Partner ID</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_review.html">gd_review()</a></code> </p>
-        </td>
-        <td><p>Glassdoor Company Search</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_url.html">gd_url()</a></code> </p>
-        </td>
-        <td><p>Glassdoor URL</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gd_user_agent.html">gd_user_agent()</a></code> </p>
-        </td>
-        <td><p>Glassdoor User Agent</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_ip.html">get_ip()</a></code> </p>
-        </td>
-        <td><p>Get IP Address</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="results.html">results()</a></code> </p>
-        </td>
-        <td><p>Results of a Glassdoor object</p></td>
-      </tr>
-    </tbody>
-    </table>
+    <div id="glassdoor-0-8-0" class="section level1">
+<h1 class="page-header">
+<a href="#glassdoor-0-8-0" class="anchor"></a>glassdoor 0.8.0<small> Unreleased </small>
+</h1>
+<ul>
+<li>Added <code>gd_employer_df</code>, <code>gd_review</code>, and <code>gd_company_df</code>.</li>
+<li>Fixed the <code>query</code> argument in general API, which may break some code, but more clean in the future.</li>
+</ul>
+</div>
+    <div id="glassdoor-0-7-5" class="section level1">
+<h1 class="page-header">
+<a href="#glassdoor-0-7-5" class="anchor"></a>glassdoor 0.7.5<small> Unreleased </small>
+</h1>
+<ul>
+<li>Fixed <code>DESCRIPTION</code> file and submitting to CRAN.</li>
+</ul>
+</div>
+    <div id="glassdoor-0-7-0" class="section level1">
+<h1 class="page-header">
+<a href="#glassdoor-0-7-0" class="anchor"></a>glassdoor 0.7.0<small> Unreleased </small>
+</h1>
+<ul>
+<li><p>Added a <code>NEWS.md</code> file to track changes to the package.</p></li>
+<li><p>First Submission to CRAN</p></li>
+</ul>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
-    </ul>
+    <div id="tocnav">
+      <h2>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#glassdoor-0-8-0">0.8.0</a></li>
+        <li><a href="#glassdoor-0-7-5">0.7.5</a></li>
+        <li><a href="#glassdoor-0-7-0">0.7.0</a></li>
+      </ul>
+    </div>
   </div>
+
 </div>
 
       <footer>
