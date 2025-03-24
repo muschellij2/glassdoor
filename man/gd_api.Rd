@@ -4,9 +4,19 @@
 \alias{gd_api}
 \title{General Glassdoor API function}
 \usage{
-gd_api(query = NULL, action = NULL, agent = gd_user_agent(),
-  version = 1, format = "json", url = gd_url(), pid = gd_pid(),
-  pat = gd_pat(), ip_address = NULL, add_query = NULL, ...)
+gd_api(
+  query = NULL,
+  action = NULL,
+  agent = gd_user_agent(),
+  version = 1,
+  format = "json",
+  url = gd_url(),
+  pid = gd_pid(),
+  pat = gd_pat(),
+  ip_address = NULL,
+  add_query = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{Additional options to pass to the query other than those
@@ -34,7 +44,7 @@ jobs, which is currently version 1.1}
 \item{add_query}{Additional options to pass to the query other than those
 specified here (named list)}
 
-\item{...}{Additional options to send to \code{\link{GET}}}
+\item{...}{Additional options to send to \code{\link[httr]{GET}}}
 }
 \value{
 A list of class \code{gd_api}

@@ -4,8 +4,7 @@
 \alias{gd_review}
 \title{Glassdoor Company Search}
 \usage{
-gd_review(employer_id, ..., page_number = NULL, page_size = NULL,
-  query = NULL)
+gd_review(employer_id, ..., page_number = NULL, page_size = NULL, query = NULL)
 }
 \arguments{
 \item{employer_id}{Glassdoor ID for the company, can be accessed using

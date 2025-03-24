@@ -15,7 +15,7 @@
 #' @param ip_address The IP address of the end user to whom the API results will be shown
 #' @param add_query Additional options to pass to the query other than those
 #' specified here (named list)
-#' @param ... Additional options to send to \code{\link{GET}}
+#' @param ... Additional options to send to \code{\link[httr]{GET}}
 #'
 #' @return A list of class \code{gd_api}
 #' @export

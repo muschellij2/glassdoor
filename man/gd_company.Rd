@@ -7,13 +7,27 @@
 \alias{gd_employer_df}
 \title{Glassdoor Company Search}
 \usage{
-gd_company(query = NULL, ..., location = NULL, city = NULL,
-  state = NULL, country = NULL, page_number = NULL,
-  page_size = NULL)
+gd_company(
+  query = NULL,
+  ...,
+  location = NULL,
+  city = NULL,
+  state = NULL,
+  country = NULL,
+  page_number = NULL,
+  page_size = NULL
+)
 
-gd_employer(query = NULL, ..., location = NULL, city = NULL,
-  state = NULL, country = NULL, page_number = NULL,
-  page_size = NULL)
+gd_employer(
+  query = NULL,
+  ...,
+  location = NULL,
+  city = NULL,
+  state = NULL,
+  country = NULL,
+  page_number = NULL,
+  page_size = NULL
+)
 
 gd_company_df(...)
 

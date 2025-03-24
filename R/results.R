@@ -10,7 +10,7 @@
 #' list of \code{progression_table} and \code{job_info}.
 #' @examples
 #' if (have_gd_tokens()) {
-#'    gd = gd_job_prog(jobTitle = "cashier", countryId = 1)
+#'    gd = gd_company("walmart")
 #'    res = results(gd)
 #' }
 results = function(gd, ...){

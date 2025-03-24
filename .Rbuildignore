@@ -18,3 +18,4 @@ sticker\.png
 ^sticker\.R$
 ^sticker\.png$
 ^sticker\.jpg$
+^R/obsolete$

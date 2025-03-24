@@ -43,7 +43,7 @@ res = gd_api(
 }
 ```
 
-The function used here is `gd_api` which is the workhorse function of the package.   Generally, however, you probably want to use `gd_job_stats`, `gd_job_prog`, or `gd_company`.
+The function used here is `gd_api` which is the workhorse function of the package.   Generally, however, you probably want to use `gd_job_stats` or `gd_company`.
 
 ## Job Statistics 
 
@@ -64,20 +64,6 @@ if (have_gd_tokens()) {
     head(res$content$response$jobTitles, 3)
 }
 ```
-
-## Job Progression 
-
-The job statistics specification can be found https://www.glassdoor.com/developer/jobsApiActions.htm#JobProgression.
-
-```{r}
-job_name = "sales associate"
-if (have_gd_tokens()) {
-  res = gd_job_prog(
-    jobTitle = job_name)
-  head(res$content$response$results, 2)
-}
-```
-which gives the percentage of transitions to another profession after being a `r job_name`
 
 
 ## Employers

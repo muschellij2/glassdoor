@@ -30,7 +30,7 @@ Calculates the results from Glassdoor object
 }
 \examples{
 if (have_gd_tokens()) {
-   gd = gd_job_prog(jobTitle = "cashier", countryId = 1)
+   gd = gd_company("walmart")
    res = results(gd)
 }
 }
