@@ -19,3 +19,5 @@ sticker\.png
 ^sticker\.png$
 ^sticker\.jpg$
 ^R/obsolete$
+^CRAN-SUBMISSION$
+^\.github$
