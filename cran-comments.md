@@ -6,4 +6,4 @@
 
 ---
 
-Fixed the \links for CRAN.
+Fixed the \links for CRAN and removed LazyData.
