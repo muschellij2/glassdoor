@@ -28,9 +28,7 @@ devtools::install_github("muschellij2/glassdoor")
 ## Glassdoor API Keys
 
 In order to use the `glassdoor` package, you need an API key from
-Glassdoor (either
-<https://www.glassdoor.com/developer/register_input.htm> or click Get
-API key from <https://www.glassdoor.com/developer/index.htm>).
+Glassdoor.
 
 After that is done, you need to set up the API keys. The keys are
 grabbed using
