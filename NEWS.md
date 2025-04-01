@@ -1,3 +1,8 @@
+# glassdoor 0.9.0
+
+* Removed jobs_prog as endpoint is gone.
+* Added packages for \link to get back on CRAN.
+
 # glassdoor 0.8.0
 
 * Added `gd_employer_df`, `gd_review`, and `gd_company_df`.

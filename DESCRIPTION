@@ -1,12 +1,11 @@
 Type: Package
 Package: glassdoor
 Title: Interface to 'Glassdoor' API
-Version: 0.8.2
+Version: 0.9.0
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = c("aut", "cre"),
            email = "muschellij2@gmail.com")
-Maintainer: John Muschelli <muschellij2@gmail.com>
 Description: Interacts with the 'Glassdoor' API
     <https://www.glassdoor.com/developer/index.htm>. Allows the user to
     search job statistics, employer statistics, and job progression,
